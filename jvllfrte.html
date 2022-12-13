@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="'viewport" content="'width=device-width, initial-scale=1.0">
+    <title>my personal website</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<header>
+
+    <div class="user">
+        <img src="img/icon.jpg" alt="">
+        <h3 class="name">Jay Ram Villafuerte</h3>
+        <p class="post">BSIT Student in AdU</p>
+    </div>
+
+    <nav class="navbar">
+       <ul>
+           <li><a href="#home">home</a></li>
+           <li><a href="#about">about</a></li>
+           <li><a href="#gallery">gallery</a></li>
+           <li><a href="#contact">contact</a></li>
+       </ul>
+    </nav>
+</header>
+
+<div id="menu" class="fas fa-bars"></div>
+<section class="home" id="home">
+    <h3>Greetings!</h3>
+    <h1>I'm <span>jay ram villafuerte</span></h1>
+    <p>Welcome to my personal website. Feel free to look around!</p>
+    <a href="#about"><button class="btn">about me<i class="fas fa-user"></i></button></a>
+</section>
+
+<section class="about" id="about">
+    <h1 class="heading"><span>about</span> me </h1>
+    <div class="row">
+        <div class="info">
+            <h3> <span> name : </span> jay ram b. villafuerte </h3>
+            <h3> <span> age : </span> 18 </h3>
+            <h3> <span> hometown : </span> montalban, rizal </h3>
+            <h3> <span> school : </span> adamson university </h3>
+            <h3> <span> course : </span> bachelor of science in information technology </h3>
+            <h3> <span> year : </span> freshmen </h3>
+        </div>
+        <div class="counter">
+        <div class="image">
+            <span>guitar</span>
+            <h3>skill</h3>
+        </div>
+        <div class="image">
+            <span>filipino</span>
+            <h3>nationality</h3>
+        </div>
+        <div class="image">
+            <span>5'7</span>
+            <h3>height</h3>
+        </div>
+        <div class="image">
+            <span>70kg</span>
+            <h3>weight</h3>
+        </div>
+    </div>
+
+</section>
+
+<section class="gallery" id="gallery">
+    <div class="container">
+     <h1 class="heading"> my <span>gallery</span> </h1> 
+     <div class="image-container">
+         <div class="image"><img src="img/baby.jpg" alt=""></div>
+         <div class="image"><img src="img/child.jpg" alt=""></div>
+         <div class="image"><img src="img/elem.jpg" alt=""></div>
+         <div class="image"><img src="img/jhs2.jpg" alt=""></div>
+         <div class="image"><img src="img/shs.jpg" alt=""></div>
+         <div class="image"><img src="img/icon.jpg" alt=""></div>
+     </div>     
+     <div class="popup-image">
+         <span>&times;</span>
+         <img src="img/baby.jpg" alt="">
+     </div>
+    </div>
+
+</section>
+
+<section class="contact" id="contact">
+<h1 class="heading"> <span>contact</span> me </h1> 
+<div class="row">
+    <div class="content">
+        <h3 class="title">my socials</h3>
+        <div class="info">
+            
+            <a href="mailto:jayramvllfrte@gmail.com"><h3><i class="fas fa-envelope"></i>email</h3></a>
+            <a href="https://www.facebook.com/profile.php?id=100011243258365&mibextid=ZbWKwL"><h3><i class="fa-brands fa-facebook"></i>facebook</h3></a>
+            <a href="https://instagram.com/jrmvllfrte?igshid=MWM2YjBjM2Q%3D"><h3><i class="fa-brands fa-instagram"></i>instagram</h3></a>
+            <a href="https://twitter.com/jayramvllfrte?s=07"><h3><i class="fa-brands fa-twitter"></i>twitter</h3></a>
+            <a href="https://maps.app.goo.gl/aj6dbnfWrznXLgkX9"><h3><i class="fas fa-map-marker-alt"></i>location</h3></a>
+    </div>
+</div>
+
+<script>
+    document.querySelectorAll('.image-container img').forEach(image =>{
+        image.onclick = () =>{
+            document.querySelector('.popup-image').style.display = 'block';
+            document.querySelector('.popup-image img').src = image.getAttribute('src');
+        }
+    });
+    document.querySelector('.popup-image span').onclick = () =>{
+        document.querySelector('.popup-image').style.display = 'none';
+    }
+</script>
+</section>
+
+<a href="#home" class="top">
+    <i class="fa-solid fa-arrow-up"></i>
+</a>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
